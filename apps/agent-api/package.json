@@ -1,0 +1,48 @@
+{
+  "name": "ai-comics-agent",
+  "version": "0.1.0",
+  "description": "AI Comics Agent — Manus-style agent powered by Vercel AI SDK",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nest start --watch --entryFile index",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "tsc --noEmit",
+    "test:video-tool": "tsx scripts/test-generate-video.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.53",
+    "@langchain/core": "^1.1.42",
+    "@langchain/langgraph": "^1.2.9",
+    "@langchain/langgraph-checkpoint-sqlite": "^1.0.1",
+    "@langchain/openai": "^1.4.5",
+    "@nestjs/common": "^11.1.19",
+    "@nestjs/core": "^11.1.19",
+    "@nestjs/platform-express": "^11.1.19",
+    "ai": "^6.0.168",
+    "axios": "^1.15.2",
+    "better-sqlite3": "^12.10.0",
+    "cheerio": "^1.0.0",
+    "dockerode": "^5.0.0",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.45.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "ws": "^8.20.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/dockerode": "^4.0.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.15.3",
+    "@types/ws": "^8.18.1",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,21 @@
+# Node
+node_modules/
+.pnpm-store/
+
+# Build
+**/dist/
+**/.output/
+**/coverage/
+
+# Env
+**/.env
+**/.env.*
+!.env.example
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

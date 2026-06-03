@@ -1,0 +1,12 @@
+{
+  "name": "opensource-manus",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Open-source separated frontend/backend workspace for AI agent + sandbox",
+  "packageManager": "pnpm@10",
+  "scripts": {
+    "dev:web": "pnpm --filter ./apps/web dev",
+    "dev:agent": "pnpm --filter ./apps/agent-api start:dev",
+    "dev:sandbox": "pnpm --filter ./apps/sandbox-server dev"
+  }
+}

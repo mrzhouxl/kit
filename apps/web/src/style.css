@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* 字体系统 */
+  --tech-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+
+  /* 圆角系统 */
+  --tech-radius-sm: 8px;
+  --tech-radius-md: 12px;
+  --tech-radius-lg: 16px;
+  --tech-radius-xl: 20px;
+
+  /* 品牌色 */
+  --tech-accent: var(--td-brand-color);
+  --tech-accent-strong: var(--td-brand-color-active);
+  --tech-outline: color-mix(in srgb, var(--td-brand-color) 42%, #fff);
+
+  /* 清新色板 - 亮色 */
+  --surface-bg: #f5f7ff;
+  --surface-card: #ffffff;
+  --surface-sidebar: #ffffff;
+  --surface-border: #e8ecf4;
+  --surface-border-subtle: #f0f2f8;
+  --text-primary: #1a2035;
+  --text-secondary: #6b7a99;
+  --text-muted: #9aa5be;
+
+  /* 阴影系统 */
+  --shadow-sm: 0 1px 4px 0 rgb(26 32 53 / 6%);
+  --shadow-md: 0 4px 16px 0 rgb(26 32 53 / 8%);
+  --shadow-lg: 0 12px 32px 0 rgb(26 32 53 / 10%);
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--tech-font);
+  letter-spacing: 0.01em;
+  transition: background-color 220ms ease, color 220ms ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* ─── 主题：亮色 ─── */
+html.theme-light body {
+  background-color: var(--surface-bg);
+  color: var(--text-primary);
+}
+
+/* ─── 主题：暗色 ─── */
+html.theme-dark {
+  --surface-bg: #0f1220;
+  --surface-card: #161c2e;
+  --surface-sidebar: #131829;
+  --surface-border: #252d42;
+  --surface-border-subtle: #1e2538;
+  --text-primary: #eaf0ff;
+  --text-secondary: #8b9bbf;
+  --text-muted: #5a6a8a;
+  --shadow-sm: 0 1px 4px 0 rgb(0 0 0 / 20%);
+  --shadow-md: 0 4px 16px 0 rgb(0 0 0 / 28%);
+  --shadow-lg: 0 12px 32px 0 rgb(0 0 0 / 36%);
+}
+
+html.theme-dark body {
+  background-color: var(--surface-bg);
+  color: var(--text-primary);
+}
+
+/* ─── 通用面板 ─── */
+.tech-panel {
+  border: 1px solid var(--surface-border);
+  border-radius: var(--tech-radius-lg);
+  background-color: var(--surface-card);
+  box-shadow: var(--shadow-md);
+}
+
+/* ─── 焦点环 ─── */
+.tech-focus:focus-visible {
+  outline: 2px solid var(--tech-outline);
+  outline-offset: 2px;
+}
+
+/* ─── 品牌色工具类 ─── */
+.tech-brand-text {
+  color: var(--td-brand-color);
+}
+
+.tech-brand-active {
+  border-color: color-mix(in srgb, var(--td-brand-color) 35%, transparent);
+  background-color: color-mix(in srgb, var(--td-brand-color) 10%, transparent);
+  color: var(--td-brand-color);
+}
+
+.tech-brand-hover:hover {
+  border-color: color-mix(in srgb, var(--td-brand-color) 40%, transparent);
+  color: var(--td-brand-color);
+}
+
+.tech-brand-plate {
+  border-color: color-mix(in srgb, var(--td-brand-color) 40%, transparent);
+  background-color: color-mix(in srgb, var(--td-brand-color) 12%, transparent);
+  color: var(--td-brand-color);
+}
+
+.tech-brand-button {
+  border-color: color-mix(in srgb, var(--td-brand-color) 50%, transparent);
+  background-color: color-mix(in srgb, var(--td-brand-color) 12%, transparent);
+  color: var(--td-brand-color);
+}
+
+.tech-brand-button:hover {
+  background-color: color-mix(in srgb, var(--td-brand-color) 22%, transparent);
+}
+
+/* ─── 侧边栏导航项 ─── */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--tech-radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background-color: color-mix(in srgb, var(--td-brand-color) 8%, transparent);
+  color: var(--td-brand-color);
+}
+
+.nav-item.active {
+  background-color: color-mix(in srgb, var(--td-brand-color) 12%, transparent);
+  color: var(--td-brand-color);
+  font-weight: 600;
+}
+
+.nav-item-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  opacity: 0.75;
+}
+
+.nav-item.active .nav-item-icon,
+.nav-item:hover .nav-item-icon {
+  opacity: 1;
+}
