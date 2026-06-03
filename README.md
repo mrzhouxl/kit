@@ -1,7 +1,4 @@
-# opensource-manus
-
-AI Comics 的开源拆分工作区，包含前端、Agent API 与沙箱服务，使用 `pnpm workspace` 统一管理。
-
+# Kit
 ## 包含内容
 
 - `apps/web`：前端应用（Vue3 + Vite + TDesign）
@@ -47,7 +44,6 @@ AI Comics 的开源拆分工作区，包含前端、Agent API 与沙箱服务，
 ## 工作区结构
 
 ```text
-opensource-manus/
 ├── apps/
 │   ├── web/
 │   ├── agent-api/
